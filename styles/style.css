@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    transition: background .4s ease;
+}
+
+body.activeDarkMode {
+    background-color: #272727;
+} 
+
+body.activeDarkMode > main > div{
+    background-color: #343434;
+    color: rgb(215, 215, 247)
+}
+
+body.activeDarkMode > section > button {
+    background-color: #343434;
+}
+
+body.activeDarkMode > section > button > span {
+    color: white;
+}
+
+main {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > div {
+    background-color: #ffffff;
+    color: #272727;
+    font-size: 140px;
+    padding: 40px;
+    box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.229);
+    border-radius: 10px;
+
+    transition: background .4s ease;
+}
+
+section > button {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+
+    border: none;
+    box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.229);
+
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 10px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+button > span {
+    background: url('./images/sun__icon.svg') no-repeat top center/cover;
+    width: 100%;
+    height: 100%;
+
+    transform: rotate(360deg);
+
+    transition: all .4s ease;
+}
+
+.icon__button {
+    background: url('./images/moon__icon.svg') no-repeat top center/cover;
+    width: 100%;
+    height: 100%;
+
+    transform: rotate(0deg);
+    transition: all .4s ease;
+}
+
+@media only screen and (max-width: 680px) {
+
+    main > div {
+        font-size: 56px;
+    }    
+}
